@@ -5,12 +5,12 @@ const carros = [
 //Los comandos aquí renderizan la vista en el listado, el formulario y reciben los datos del formulario.
 module.exports = {
   index(req, res) {
-    res.render('index11', { carros });
+    res.render('index34', { carros });
   },
 
 
   createForm(req, res) {
-    res.render('create11');
+    res.render('create34');
   },
 
  
@@ -19,7 +19,7 @@ module.exports = {
     if (!id || !marca) {
       return res.status(400).send('Se requiere id y marca');
     }
-//Evita que se repita el mismo ID
+//aqui evita que se repita el mismo ID
     const exists = carros.find(c => c.id === id);
     if (exists) {
       return res.status(400).send('Ya existe un carro con ese id');
@@ -31,10 +31,10 @@ module.exports = {
   show(req, res) {
     const id = req.params.id || req.query.id;
     if (!id) {
-      return res.render('show11', { carro: null, id: null });
+      return res.render('show34', { carro: null, id: null });
     }
     //Buscar el carro  con el vector.
     const carro = carros.find(c => c.id === id);
-    return res.render('show11', { carro: carro || null, id });
+    return res.render('show34', { carro: carro || null, id });
   }
 };

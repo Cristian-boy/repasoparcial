@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/habitacion11.controller');
+const controller = require('../controllers/habitacion34.controller');
 // Ruta principal: muestra listado de carros, mostrar formulario y procesar formulario para guardar carro.
 router.get('/', controller.index);
 router.get('/create', controller.createForm);

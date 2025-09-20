@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-const habitacionRouter = require('./routes/habitacion11.router');
+const habitacionRouter = require('./routes/habitacion34.router');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
