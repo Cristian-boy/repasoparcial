@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mostrar Carro</title>
+</head>
+<body>
+  <h1>Mostrar Carro</h1>
+
+  <form action="/show" method="get">
+    <input type="text" name="id" placeholder="Buscar por id" value="<%= id || '' %>">
+    <button type="submit">Buscar</button>
+  </form>
+
+  <% if (carro) { %>
+    <h2>Carro encontrado</h2>
+    <p><strong>ID:</strong> <%= carro.id %></p>
+    <p><strong>Marca:</strong> <%= carro.marca %></p>
+  <% } else if (id) { %>
+    <p>No se encontró un carro con id "<%= id %>"</p>
+  <% } else { %>
+    <p>Introduce un id para buscar.</p>
+  <% } %>
+
+  <a href="/">Volver</a>
+</body>
+</html>
